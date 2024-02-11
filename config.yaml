@@ -118,7 +118,7 @@ params:
       disableEducation: false
       disableProjects: false
       disableAchievements: false
-      disableContact: false
+      disableContact: true
 
   # Hero
   hero:
@@ -130,13 +130,13 @@ params:
     image:  Images/me_toon_white.jpg
     bottomImage:
       enable: true
-    # roundImage: true # Make hero image circular | default false
+      roundImage: true # Make hero image circular | default false
     button:
       enable: true
-      name: "Resume"
-      url: "#"
+      name: "Check me out :-)"
+      url: "https://bento.me/LexiLominite"
       download: true
-      newPage: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -354,10 +354,10 @@ params:
   #Contact
   contact:
     enable: true
-    # title: "Custom Name"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    title: "Wanna Know more about me ??"
+    content: Check out my profiles here :-) https://bento.me/LexiLominite
     email: lexilominite@gmail.com
-    btnName: Mail me
+    btnName: Mail me :-)
     # formspree:
     #   enable: true # `contact.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
