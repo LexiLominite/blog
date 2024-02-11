@@ -1,0 +1,407 @@
+baseURL: "https://lexilominite.com"
+languageCode: "en-us"
+title: "LexiLominite's Blog"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "LexiLominite's Blog"
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "Images/me_toon_white.jpg"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "LexiLominite's Blog" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Lalith Kumar."
+    subtitle: "I write blogs related to Cybersecurity certifications, CTF Walkthroughs and many more...."
+    content: "A Passionate Ethical Hacker. Certified eCPPTv2, eWPT, eJPT, CRTP and preparing for OSCP!"
+    image:  Images/me_toon_white.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/lexilominite
+        - icon: fab fa-x-twitter
+          url: https://twitter.com/LexiLominite
+      customIcons:
+        - icon: Images/me_toon_white.jpg
+          url: "https://bento.me/LexiLominite"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "Images/picture.jpg"
+    content: |-
+      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+
+      I am currently working on a project that will be used to help people find the best way to get around the city.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "HTML"
+        - "CSS"
+        - "JavaScript"
+        - "React"
+        - "Node"
+        - "Express"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Web Application Penetration Tester"
+        company: "Bug Claim"
+        companyUrl: "https://example.com"
+        date: "Jul 2021 - Aug 2021"
+        featuredLink:
+          enable: false
+          name: "View the project"
+          url: "https://example.com"
+        content: |
+          Bug Claim is a startup which is focussing to become a gateway between the bug hunters and companies to provide money to security researchers who responsibily reported bug on a company.
+            
+            - Perform penetration tests on computer systems, networks and applications. Create new testing methods to identify vulnerabilities. Perform physical security assessments of systems, servers and other network devices to identify areas that require physical protection.
+            
+      - job: "Jr. Penetration Tester Intern"
+        company: "Security Knock"
+        companyUrl: ""
+        date: "May 2022 - July 2022"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
+        content: |
+          Security Knock is a company which is trying to provide services which helps to determine the security of target organisation.
+
+          - Test the security architecture of the company
+          - Finding, exploiting the vulnerabilities
+          - Determining the impact of the vulnerability
+          - Submitting the report on the finding of a security assessments
+
+
+      - job: "A Cybersecurity Intern & Team Leader"
+        company: "VIEH Group"
+        companyUrl: "https://example.com"
+        date: "Aug 2022 - Oct 2022"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://github.com/LexiLominite/ComicInc-CTF-Project/"
+        content: |
+          - Penetration Testing · Vulnerability Scanning · Vulnerability Assessment · Vulnerability Research · Cybersecurity · Vulnerability Management · Threat & Vulnerability Management
+          - Team Leader for the Project.
+          
+
+      # - job: ""
+      #   company: "Netflix"
+      #   companyUrl: "https://example.com"
+      #   date: "June 2017 - Nov 2019"
+      #   featuredLink:
+      #     enable: true
+      #     url: "https://example.com"
+      #   content: |
+      #     Worked on HTML, CSS, Java Script, Java Servlets, Java Server Pages, JDBC, MySQL using Apache NetBeans
+
+      #     - Lead backend developer for a product.
+      #     - Created a frontend design for a product.
+
+      # - job: "Product Designer"
+      #   company: "Google"
+      #   companyUrl: "https://example.com"
+      #   date: "Feb 2016 - Mar 2017"
+      #   content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Maths with Commerce and Telugu as electives"
+        school:
+          name: "The Future Kids School, Rajahmundry"
+          url: "https://example.org"
+        date: "OCT 2017 - 2020"
+        GPA: "79.9 out of 100"
+        content: |-
+          Extracurricular Activities
+            - A 2x District gold medalist, 2x State medalist and 2 times National player in Archery.. 
+
+      - title: "Diploma in Computer Engineering"
+        school:
+          name: "Smt B Seetha Polytechnic"
+          url: "https://example.org"
+        date: "Oct 2021 - 2024"
+      #   GPA: ""
+      #   content: |-
+          
+
+      #     Extracurricular Activities
+      #       - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      #       - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      #   featuredLink:
+      #     enable: false
+      #     name: "My academic record"
+      #     url: "https://example.com"
+      # - title: "High School"
+      #   school:
+      #     name: "Thomas Jefferson High School for Science and Technology."
+      #     url: "https://example.org"
+      #   GPA: "4.2 out of 5.0"
+      #   featuredLink:
+      #     enable: true
+      #     url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "Certifications"
+    items:
+      - title: eCPPTv2 - eLearnSecurity Certified Professional Penetration Tester
+        content: eCPPTv2 (eLearnSecurity Certified Professional Penetration Tester) is an intermediate level certification that covers penetration testing methodologies and tools. The exam requires hands-on experience in performing penetration tests and includes a virtual penetration test to assess practical skills.
+        url: https://example.com
+        image: /Images/ecpptv2_logo.jpeg
+      - title:   eWPT - eLearnSecurity Certified Web Application Penetration Tester
+        content: eWPT (eLearnSecurity Web application Penetration Tester) is an advanced level certification that covers web application penetration testing methodologies and techniques. The exam requires a deep understanding of web application architecture and vulnerabilities, and includes a virtual penetration test to assess practical skills.
+        image: /Images/ewptv1_logo.jpeg
+      - title: CRTP - Certified Red Team Professional
+        content: CRTP (Certified Red Team Professional) is an advanced-level certification that covers the skills and knowledge required to lead a red team engagement. The exam requires a deep understanding of advanced penetration testing and red teaming techniques, and includes a practical assessment of red teaming skills.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /Images/crtp_logo.jpeg
+      - title: eJPT - eLearnSecurity Certified Junior Penetration Tester
+        image: /Images/ejptv1_logo.jpeg
+        content: eJPT (eLearnSecurity Junior Penetration Tester) is an entry-level certification that covers the basics of penetration testing and ethical hacking. The exam includes a practical assessment of penetration testing skills and knowledge of tools and techniques.
+      # - title: Google Summer of Code
+      #   content: Contributed to a open source project.
+      #   url: https://example.com
+
+  # # projects
+  # projects:
+  #   enable: true
+  #   # title: "Custom Name"
+  #   items:
+  #     - title: LexiLominite's Blog
+  #       content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+  #       image: /images/projects/profile.png
+  #       featured:
+  #         name: Demo
+  #         link: https://hugo-profile.netlify.app
+  #       badges:
+  #         - "Hugo"
+  #         - "Bootstrap"
+  #         - "Javascript"
+  #       links:
+  #         - icon: fa fa-envelope
+  #           url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+  #         - icon: fab fa-github
+  #           url: https://github.com/gurusabarish/hugo-profile
+  #         - icon: fab fa-twitter
+  #           url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+  #     - title: Image Converter
+  #       content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+  #       image: /images/projects/converter.jpg
+  #       featured:
+  #         name: Demo
+  #         link: https://django-converter.herokuapp.com
+  #       badges:
+  #         - "Django"
+  #         - "Bootstrap"
+  #       links:
+  #         - icon: fab fa-github
+  #           url: https://github.com/gurusabarish/converter
+
+  #     - title: LexiLominite's Blog V2
+  #       content: A clean and simple Hugo template for personal portfolio and blog.
+  #       image: /images/projects/profile2.jpg
+  #       featured:
+  #         name: Demo V2
+  #         link: https://hugo-profile-2.netlify.app
+  #       badges:
+  #         - "Hugo"
+  #         - "Bootstrap"
+  #         - "Javascript"
+  #       links:
+  #         - icon: fab fa-github
+  #           url: https://github.com/gurusabarish/HugoProfileV2
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: lexilominite@gmail.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/LexiLominite
+      linkedin: https://linkedin.com/in/lexilominite
+      twitter: https://twitter.com/LexiLominite
+      instagram: https://instagram.com/lexilominite
+      facebook: https://bento.me/lexilominite
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
